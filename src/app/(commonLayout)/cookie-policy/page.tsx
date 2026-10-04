@@ -7,7 +7,7 @@ const cookieSections = [
   {
     title: "Why We Use Cookies",
     description:
-      "FoodHub uses cookies to keep you signed in, remember your preferences, and improve site performance.",
+      "Sanfoura Kitchen uses cookies to keep you signed in, remember your preferences, and improve site performance.",
     icon: Cookie,
   },
   {
@@ -42,7 +42,7 @@ export default function CookiePolicyPage() {
             Cookie Policy
           </h1>
           <p className="mt-4 max-w-2xl text-muted-foreground md:text-lg">
-            This policy explains how FoodHub uses cookies and similar
+            This policy explains how Sanfoura Kitchen uses cookies and similar
             technologies to enhance user experience, keep your account secure,
             and improve service quality.
           </p>

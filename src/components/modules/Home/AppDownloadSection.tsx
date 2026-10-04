@@ -95,7 +95,7 @@ export const AppDownloadSection = () => {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-xs uppercase tracking-[0.2em] text-white/60">
-                      FoodHub App
+                      Sanfoura Kitchen App
                     </p>
                     <h3 className="mt-2 text-2xl font-bold">
                       Always in your pocket

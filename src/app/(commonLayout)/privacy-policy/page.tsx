@@ -38,7 +38,7 @@ export default function PrivacyPolicyPage() {
             Privacy Policy
           </h1>
           <p className="mt-4 max-w-2xl text-muted-foreground md:text-lg">
-            This policy describes how FoodHub collects, uses, and safeguards
+            This policy describes how Sanfoura Kitchen collects, uses, and safeguards
             your data when you use our platform.
           </p>
         </div>

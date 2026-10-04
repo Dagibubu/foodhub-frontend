@@ -63,7 +63,7 @@ export const Footer = () => {
               <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-linear-to-br from-orange-500 to-red-600 shadow-lg shadow-orange-500/30">
                 <span className="text-white font-bold text-xl">F</span>
               </div>
-              <span className="text-xl font-bold">FoodHub</span>
+              <span className="text-xl font-bold">Sanfoura Kitchen</span>
             </div>
             <p className="mb-6 max-w-sm text-muted-foreground mx-auto sm:mx-0">
               Your favorite food from the best local restaurants, delivered fast
@@ -156,7 +156,7 @@ export const Footer = () => {
           transition={{ duration: 0.34, ease: "easeOut", delay: 0.1 }}
         >
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} FoodHub. All rights reserved.
+            © {new Date().getFullYear()} Sanfoura Kitchen. All rights reserved.
           </p>
           <p className="text-sm text-muted-foreground">
             Made with ❤️ for food lovers everywhere

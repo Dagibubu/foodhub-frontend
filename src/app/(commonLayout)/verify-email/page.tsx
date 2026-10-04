@@ -4,7 +4,7 @@ import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Verify Email",
-  description: "Verify your email address to activate your FoodHub account.",
+  description: "Verify your email address to activate your Sanfoura Kitchen account.",
 };
 
 export default function VerifyEmailPage() {

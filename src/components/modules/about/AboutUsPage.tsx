@@ -61,13 +61,13 @@ export default function AboutUsPage() {
             >
               <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-primary/90">
                 <Sparkles className="h-3.5 w-3.5" />
-                About FoodHub
+                About Sanfoura Kitchen
               </span>
               <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
                 We are building the most trusted food delivery experience.
               </h1>
               <p className="mt-6 text-base sm:text-lg text-muted-foreground max-w-xl">
-                FoodHub connects people with great meals from reliable local
+                Sanfoura Kitchen connects people with great meals from reliable local
                 partners. We focus on quality, speed, and transparency so every
                 order feels easy and dependable.
               </p>
@@ -165,7 +165,7 @@ export default function AboutUsPage() {
           <div className="rounded-3xl border border-border/60 bg-card/80 backdrop-blur-sm p-6 sm:p-8 lg:p-10">
             <div className="flex items-center justify-between flex-wrap gap-4 mb-8">
               <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
-                FoodHub in Numbers
+                Sanfoura Kitchen in Numbers
               </h2>
               <div className="inline-flex items-center gap-2 text-sm text-muted-foreground">
                 <Users className="h-4 w-4" />

@@ -48,7 +48,7 @@ export default function BlogDetailsPage({ blog }: BlogDetailsPageProps) {
 
           <div className="mt-6">
             <Badge className="bg-red-600/10 text-red-600 hover:bg-red-600/15">
-              FoodHub Blog
+              Sanfoura Kitchen Blog
             </Badge>
             <h1 className="mt-4 text-3xl md:text-5xl font-bold leading-tight text-foreground">
               {blog.title}
@@ -57,7 +57,7 @@ export default function BlogDetailsPage({ blog }: BlogDetailsPageProps) {
             <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
               <span className="inline-flex items-center gap-1.5">
                 <UserRound className="h-4 w-4" />
-                {blog.user?.name || "FoodHub"}
+                {blog.user?.name || "Sanfoura Kitchen"}
               </span>
               <span className="inline-flex items-center gap-1.5">
                 <Calendar className="h-4 w-4" />

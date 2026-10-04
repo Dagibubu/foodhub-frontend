@@ -17,7 +17,7 @@ const testimonials: Testimonial[] = [
     avatar: "https://api.dicebear.com/9.x/notionists/svg?seed=Ayesha",
     rating: 5,
     review:
-      "FoodHub completely changed my weeknights. Fast delivery, fresh food, and always reliable.",
+      "Sanfoura Kitchen completely changed my weeknights. Fast delivery, fresh food, and always reliable.",
   },
   {
     id: "2",
@@ -49,7 +49,7 @@ const testimonials: Testimonial[] = [
     avatar: "https://api.dicebear.com/9.x/notionists/svg?seed=Tania",
     rating: 5,
     review:
-      "From family dinners to quick snacks, FoodHub consistently delivers quality and speed.",
+      "From family dinners to quick snacks, Sanfoura Kitchen consistently delivers quality and speed.",
   },
 ];
 
@@ -84,7 +84,7 @@ export const TestimonialsSection = () => {
             Loved by Foodies Across the City
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground mt-5">
-            Real feedback from real customers who trust FoodHub every day.
+            Real feedback from real customers who trust Sanfoura Kitchen every day.
           </p>
         </motion.div>
 

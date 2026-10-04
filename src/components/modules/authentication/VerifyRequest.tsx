@@ -32,7 +32,7 @@ export function VerifyRequest() {
             <div className="w-12 h-12 rounded-xl bg-red-600 flex items-center justify-center">
               <span className="text-white font-bold text-2xl">F</span>
             </div>
-            <span className="text-2xl font-bold text-foreground">FoodHub</span>
+            <span className="text-2xl font-bold text-foreground">Sanfoura Kitchen</span>
           </Link>
         </div>
 
@@ -146,10 +146,10 @@ export function VerifyRequest() {
         <p className="text-center text-xs text-muted-foreground">
           Need help? Contact us at{" "}
           <a
-            href="mailto:support@foodhub.com"
+            href="mailto:sanfourakitchen@gmail.com"
             className="text-primary hover:underline"
           >
-            support@foodhub.com
+            sanfourakitchen@gmail.com
           </a>
         </p>
       </div>

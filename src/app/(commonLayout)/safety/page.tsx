@@ -7,7 +7,7 @@ const safetyItems = [
   {
     title: "Safe Delivery Standards",
     description:
-      "FoodHub follows safe delivery and hygiene practices to maintain meal quality from provider to doorstep.",
+      "Sanfoura Kitchen follows safe delivery and hygiene practices to maintain meal quality from provider to doorstep.",
     icon: Truck,
   },
   {

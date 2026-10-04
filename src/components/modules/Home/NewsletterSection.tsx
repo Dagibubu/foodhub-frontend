@@ -55,7 +55,7 @@ export const NewsletterSection = () => {
                 Offers & Updates
               </span>
               <h2 className="mt-4 text-3xl sm:text-4xl font-bold text-foreground">
-                Stay updated with FoodHub deals
+                Stay updated with Sanfoura Kitchen deals
               </h2>
               <p className="mt-4 max-w-xl text-base sm:text-lg text-muted-foreground">
                 Subscribe to get exclusive offers, fresh promotions, and app

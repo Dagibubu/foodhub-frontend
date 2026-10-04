@@ -23,7 +23,7 @@ const offers: Offer[] = [
     title: "20% OFF",
     subtitle: "Your First Order",
     icon: <Gift className="w-12 h-12" />,
-    description: "On orders above ৳500. Code: FOODHUB20",
+    description: "On orders above ৳500. Code: SANFOURA20",
     expiresIn: 24,
     bgGradient: "from-rose-500/90 via-red-500/90 to-pink-500/90",
     badge: "HOT DEAL",

@@ -61,7 +61,7 @@ export function VerifyEmailContent() {
             <div className="w-12 h-12 rounded-xl bg-red-600 flex items-center justify-center">
               <span className="text-white font-bold text-2xl">F</span>
             </div>
-            <span className="text-2xl font-bold text-foreground">FoodHub</span>
+            <span className="text-2xl font-bold text-foreground">Sanfoura Kitchen</span>
           </Link>
         </div>
 
@@ -111,7 +111,7 @@ export function VerifyEmailContent() {
                   </h1>
                   <p className="text-muted-foreground text-sm max-w-sm">
                     Your account has been successfully verified. You can now
-                    access all features of FoodHub.
+                    access all features of Sanfoura Kitchen.
                   </p>
                 </div>
                 <div className="w-full bg-green-500/5 border border-green-500/20 rounded-lg p-4">
@@ -188,10 +188,10 @@ export function VerifyEmailContent() {
         <p className="text-center text-xs text-muted-foreground">
           Need help? Contact us at{" "}
           <a
-            href="mailto:support@foodhub.com"
+            href="mailto:sanfourakitchen@gmail.com"
             className="text-primary hover:underline"
           >
-            support@foodhub.com
+            sanfourakitchen@gmail.com
           </a>
         </p>
       </div>

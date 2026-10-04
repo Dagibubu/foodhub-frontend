@@ -12,7 +12,7 @@ const contactCards = [
   {
     icon: Mail,
     title: "Email Us",
-    value: "support@foodhub.com",
+    value: "sanfourakitchen@gmail.com",
     sub: "We usually reply within a few hours",
   },
   {
@@ -192,7 +192,7 @@ export default function ContactUsPage() {
 
             <div className="overflow-hidden rounded-2xl border border-border/60">
               <iframe
-                title="FoodHub office location map"
+                title="Sanfoura Kitchen office location map"
                 src="https://www.google.com/maps?q=Gulshan%2C%20Dhaka&output=embed"
                 className="w-full h-72 sm:h-96"
                 loading="lazy"

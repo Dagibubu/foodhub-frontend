@@ -97,7 +97,7 @@ export default function Navbar() {
             <div className="w-10 h-10 rounded-xl bg-red-600 flex items-center justify-center">
               <span className="text-white font-bold text-xl">F</span>
             </div>
-            <span className="text-xl font-bold text-foreground">FoodHub</span>
+            <span className="text-xl font-bold text-foreground">Sanfoura Kitchen</span>
           </Link>
 
           {/* Middle - Nav Items (Desktop) */}

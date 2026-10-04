@@ -7,7 +7,7 @@ const termsSections = [
   {
     title: "Acceptance of Terms",
     description:
-      "By using FoodHub, you agree to follow these terms and use the platform responsibly.",
+      "By using Sanfoura Kitchen, you agree to follow these terms and use the platform responsibly.",
     icon: FileCheck2,
   },
   {
@@ -19,7 +19,7 @@ const termsSections = [
   {
     title: "Policy Updates",
     description:
-      "FoodHub may update these terms when necessary. Major changes will be reflected through platform notices.",
+      "Sanfoura Kitchen may update these terms when necessary. Major changes will be reflected through platform notices.",
     icon: ShieldAlert,
   },
 ];
@@ -38,7 +38,7 @@ export default function TermsOfServicePage() {
             Terms of Service
           </h1>
           <p className="mt-4 max-w-2xl text-muted-foreground md:text-lg">
-            These terms define how FoodHub services can be used and what users
+            These terms define how Sanfoura Kitchen services can be used and what users
             can expect while ordering from providers.
           </p>
         </div>

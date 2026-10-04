@@ -69,14 +69,14 @@ export default function BlogListPage({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <Badge className="bg-red-600/10 text-red-600 hover:bg-red-600/15">
-              FoodHub Blog
+              Sanfoura Kitchen Blog
             </Badge>
             <h1 className="mt-4 text-4xl md:text-5xl font-bold leading-tight text-foreground">
               Stories, Tips, and Food Inspiration
             </h1>
             <p className="mt-4 text-base md:text-lg text-muted-foreground">
               Explore practical guides, healthy ideas, and trending food topics
-              from the FoodHub team.
+              from the Sanfoura Kitchen team.
             </p>
           </div>
         </div>
@@ -121,7 +121,7 @@ export default function BlogListPage({
                       </span>
                       <span className="inline-flex items-center gap-1">
                         <UserRound className="h-3.5 w-3.5" />
-                        {blog.user?.name || "FoodHub"}
+                        {blog.user?.name || "Sanfoura Kitchen"}
                       </span>
                     </div>
 

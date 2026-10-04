@@ -34,7 +34,7 @@ export function AIChatbox() {
       id: "1",
       role: "ai",
       content:
-        "Hello! I'm your FoodHub AI assistant. How can I help you find the perfect meal today?",
+        "Hello! I'm your Sanfoura Kitchen AI assistant. How can I help you find the perfect meal today?",
       timestamp: new Date(),
     },
   ]);
@@ -119,7 +119,7 @@ export function AIChatbox() {
                 </div>
                 <div>
                   <h4 className="text-sm font-semibold tracking-wide text-white">
-                    FoodHub Assistant
+                    Sanfoura Kitchen Assistant
                   </h4>
                   <p className="mt-1 flex items-center gap-2 text-[10px] font-medium uppercase tracking-[0.22em] text-white/50">
                     <span className="h-1.5 w-1.5 rounded-full bg-red-400 shadow-[0_0_0_4px_rgba(248,113,113,0.12)]" />

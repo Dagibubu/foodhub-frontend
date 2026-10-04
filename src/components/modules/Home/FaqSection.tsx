@@ -25,7 +25,7 @@ const faqs = [
       "We support cash on delivery, mobile banking, and major cards. Available options are shown during checkout.",
   },
   {
-    question: "How do I become a FoodHub partner?",
+    question: "How do I become a Sanfoura Kitchen partner?",
     answer:
       "Go to the Become Provider page, submit your business details, and our team will review and onboard your restaurant quickly.",
   },
@@ -66,7 +66,7 @@ export const FaqSection = () => {
           </h2>
           <p className="text-muted-foreground text-base sm:text-lg mt-4">
             Everything you need to know about ordering, delivery, and partnering
-            with FoodHub.
+            with Sanfoura Kitchen.
           </p>
         </motion.div>
 
