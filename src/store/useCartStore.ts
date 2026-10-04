@@ -7,8 +7,8 @@ export interface CartItem {
   price: number;
   image: string | null;
   quantity: number;
-  isAvailable: boolean;
-  providerId?: string;
+  
+  
 }
 
 interface CartStore {
@@ -78,7 +78,7 @@ export const useCartStore = create<CartStore>()(
       },
     }),
     {
-      name: "food-hub-cart",
+      name: "sanfoura-cart",
       storage: createJSONStorage(() => localStorage),
     },
   ),

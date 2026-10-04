@@ -1,33 +1,9 @@
 import type { NextConfig } from "next";
+import path from "path";
 
 const nextConfig: NextConfig = {
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "images.unsplash.com",
-      },
-      {
-        protocol: "https",
-        hostname: "plus.unsplash.com",
-      },
-      {
-        protocol: "https",
-        hostname: "example.com",
-      },
-      {
-        protocol: "https",
-        hostname: "api.dicebear.com",
-      },
-    ],
-  },
-  async rewrites() {
-    return [
-      {
-        source: "/api/auth/:path*",
-        destination: `${process.env.NEXT_PUBLIC_API_URL}/api/auth/:path*`,
-      },
-    ];
+  turbopack: {
+    root: path.resolve(__dirname),
   },
 };
 

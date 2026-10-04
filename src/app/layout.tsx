@@ -1,9 +1,7 @@
-import { AIChatbox } from "@/components/layout/AiChatBot";
 import { Toaster } from "@/components/ui/sonner";
-import { ThemeProvider } from "@/providers/ThemeProvider";
+import { siteConfig } from "@/data/site";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import NextTopLoader from "nextjs-toploader";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -17,9 +15,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sanfoura Kitchen - Your Favorite Food, Delivered Fast",
-  description:
-    "Discover amazing food from multiple providers in one place. Order from local restaurants and get it delivered to your door in minutes.",
+  title: `${siteConfig.name} | ${siteConfig.nameAr}`,
+  description: siteConfig.description,
+  openGraph: {
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: ["/images/logo.png"],
+  },
 };
 
 export default function RootLayout({
@@ -28,21 +30,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <NextTopLoader color="red" height={2} />
-          {children}
-          <Toaster position="top-right" richColors />
-          <AIChatbox />
-        </ThemeProvider>
+        {children}
+        <Toaster position="top-center" richColors />
       </body>
     </html>
   );

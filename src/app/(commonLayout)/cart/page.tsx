@@ -1,15 +1,15 @@
-import { CartClient } from "@/components/modules/cart/CartClient";
-import { userService } from "@/services/user.service";
-import { redirect } from "next/navigation";
+import { CartClient } from "@/components/modules/menu/CartClient";
+import type { Metadata } from "next";
 
-export const dynamic = "force-dynamic";
+export const metadata: Metadata = {
+  title: "Your Cart | Sanfoura Kitchen",
+};
 
-export default async function CartPage() {
-  const { data } = await userService.getSession();
-
-  if (!data?.user) {
-    redirect("/login?redirect=/cart");
-  }
-
-  return <CartClient />;
+export default function CartPage() {
+  return (
+    <section className="container mx-auto px-4 py-12">
+      <h1 className="mb-8 text-3xl font-bold md:text-4xl">Your Cart</h1>
+      <CartClient />
+    </section>
+  );
 }

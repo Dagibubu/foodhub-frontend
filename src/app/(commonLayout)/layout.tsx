@@ -1,5 +1,6 @@
 import { Footer } from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
+import { WhatsAppFloat } from "@/components/layout/WhatsAppFloat";
 import React from "react";
 
 export default function CommonLayout({
@@ -12,6 +13,7 @@ export default function CommonLayout({
       <Navbar />
       <main className="pt-16">{children}</main>
       <Footer />
+      <WhatsAppFloat />
     </>
   );
 }
