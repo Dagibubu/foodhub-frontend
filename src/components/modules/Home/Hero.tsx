@@ -1,10 +1,8 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function HeroSection() {
   const fadeUp = {
@@ -56,88 +54,6 @@ export default function HeroSection() {
               Your Favorite Food,{" "}
               <span className="text-gradient">Delivered Fast</span>
             </motion.h1>
-
-            {/* Subtext */}
-            <motion.p
-              className="text-lg sm:text-xl text-muted-foreground max-w-lg"
-              variants={fadeUp}
-              transition={{ duration: 0.28, ease: "easeOut" }}
-            >
-              Discover amazing food from multiple providers in one place. Order
-              from local restaurants and get it delivered to your door in
-              minutes.
-            </motion.p>
-
-            {/* CTAs */}
-            <motion.div
-              className="flex flex-col sm:flex-row gap-4"
-              variants={fadeUp}
-              transition={{ duration: 0.24, ease: "easeOut" }}
-            >
-              <Link href={"/meals"} passHref>
-                <motion.div
-                  whileHover={{ y: -2 }}
-                  whileTap={{ scale: 0.98 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <Button
-                    className="flex items-center gap-2 cursor-pointer w-full"
-                    size="lg"
-                    variant="destructive"
-                    type="button"
-                  >
-                    Browse Meals
-                    <ArrowRight
-                      className="transition-transform group-hover:translate-x-1"
-                      size={20}
-                    />
-                  </Button>
-                </motion.div>
-              </Link>
-              <Link href={"/become-provider"} passHref>
-                <motion.div
-                  whileHover={{ y: -2 }}
-                  whileTap={{ scale: 0.98 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="flex items-center gap-2 cursor-pointer w-full"
-                  >
-                    Become a Provider
-                  </Button>
-                </motion.div>
-              </Link>
-            </motion.div>
-
-            {/* Stats */}
-            <motion.div
-              className="flex items-center gap-8 pt-4"
-              variants={fadeUp}
-              transition={{ duration: 0.28, ease: "easeOut" }}
-            >
-              <div>
-                <p className="text-2xl sm:text-3xl font-bold text-foreground">
-                  500+
-                </p>
-                <p className="text-sm text-muted-foreground">Restaurants</p>
-              </div>
-              <div className="w-px h-12 bg-border" />
-              <div>
-                <p className="text-2xl sm:text-3xl font-bold text-foreground">
-                  50k+
-                </p>
-                <p className="text-sm text-muted-foreground">Happy Customers</p>
-              </div>
-              <div className="w-px h-12 bg-border" />
-              <div>
-                <p className="text-2xl sm:text-3xl font-bold text-foreground">
-                  15 min
-                </p>
-                <p className="text-sm text-muted-foreground">Avg Delivery</p>
-              </div>
-            </motion.div>
           </div>
 
           {/* Hero Image */}
@@ -162,7 +78,7 @@ export default function HeroSection() {
               >
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
-                    <span className="text-2xl">🚀</span>
+                    <span className="text-2xl">ðŸš€</span>
                   </div>
                   <div>
                     <p className="font-semibold text-foreground">
