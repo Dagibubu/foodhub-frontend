@@ -14,6 +14,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 
+const menuCategories = [
+  { name: "Burger", image: "/menu/burger.jpg" },
+  { name: "Ethiopian Platter", image: "/menu/ethiopian-platter.jpg" },
+  {
+    name: "Chocolate Ice Cream Cake",
+    image: "/menu/chocolate-ice-cream-cake.jpg",
+  },
+  { name: "Our Packaging", image: "/menu/packaging.jpg" },
+];
+
 export function CategorySlider({
   categories,
 }: {
@@ -93,12 +103,23 @@ export function CategorySlider({
         onMouseLeave={() => plugin.current.play()}
       >
         <CarouselContent className="-ml-2 md:-ml-4">
-          {categories?.map((category, index) => (
+          {[
+            ...(categories ?? []).map((category) => ({
+              ...category,
+              href: `/meals?category=${category.slug || category.id}`,
+              count: ` (${category?._count?.meals || 0})`,
+            })),
+            ...menuCategories.map((item) => ({
+              ...item,
+              href: "/menu",
+              count: "",
+            })),
+          ].map((category, index) => (
             <CarouselItem
               key={index}
               className="pl-2 md:pl-4 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5 xl:basis-1/6"
             >
-              <Link href={`/meals?category=${category.slug || category.id}`}>
+              <Link href={category.href}>
                 <div className="group cursor-pointer">
                   <motion.div
                     whileHover={{ y: -6 }}
@@ -114,18 +135,18 @@ export function CategorySlider({
                               getCategoryImage(category?.name)
                             }
                             alt={category?.name || "Category"}
-                            className="object-cover transition-transform duration-300 group-hover:scale-110"
+                            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
                             width={400}
                             height={400}
                           />
 
                           {/* Gradient Overlay */}
-                          <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/40 to-transparent group-hover:from-black/90 transition-all duration-300" />
+                          <div className="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent group-hover:from-black/85 transition-all duration-300" />
 
                           {/* Category Name */}
                           <div className="absolute inset-0 flex items-end justify-center p-4">
                             <span className="text-white font-bold text-base md:text-lg text-center drop-shadow-lg group-hover:scale-110 transition-transform duration-300 group-hover:text-red-600">
-                              {category?.name} ({category?._count?.meals || 0})
+                              {category?.name}{category.count}
                             </span>
                           </div>
                         </div>

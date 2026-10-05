@@ -1,14 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 
 const footerLinks = {
-  company: [
-    { name: "About Us", href: "/about" },
-    { name: "Become a Provider", href: "/become-provider" },
-    { name: "Blog", href: "/blog" },
-  ],
   support: [
     { name: "Help Center", href: "/help-center" },
     { name: "Safety", href: "/safety" },
@@ -52,7 +48,7 @@ export const Footer = () => {
           visible: { opacity: 1, transition: { staggerChildren: 0.08 } },
         }}
       >
-        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
           {/* Brand */}
           <motion.div
             className="lg:col-span-2 rounded-3xl border border-white/60 bg-white/70 p-6 text-center shadow-xl shadow-orange-100/50 backdrop-blur-md sm:text-left dark:border-white/10 dark:bg-white/5 dark:shadow-none"
@@ -60,9 +56,13 @@ export const Footer = () => {
             transition={{ duration: 0.38, ease: "easeOut" }}
           >
             <div className="mb-4 flex items-center justify-center gap-2 sm:justify-start">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-linear-to-br from-orange-500 to-red-600 shadow-lg shadow-orange-500/30">
-                <span className="text-white font-bold text-xl">F</span>
-              </div>
+              <Image
+                src="/logo-sm.png"
+                alt="Sanfoura Kitchen logo"
+                width={56}
+                height={52}
+                className="h-12 w-auto"
+              />
               <span className="text-xl font-bold">Sanfoura Kitchen</span>
             </div>
             <p className="mb-6 max-w-sm text-muted-foreground mx-auto sm:mx-0">
@@ -85,27 +85,6 @@ export const Footer = () => {
                 </motion.a>
               ))}
             </div>
-          </motion.div>
-
-          {/* Links */}
-          <motion.div
-            className="rounded-3xl border border-white/60 bg-white/70 p-6 text-center shadow-xl shadow-orange-100/40 backdrop-blur-md sm:text-left dark:border-white/10 dark:bg-white/5 dark:shadow-none"
-            variants={fadeUp}
-            transition={{ duration: 0.34, ease: "easeOut" }}
-          >
-            <h4 className="mb-4 font-semibold">Company</h4>
-            <ul className="space-y-3">
-              {footerLinks.company.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="inline-block text-muted-foreground transition-all hover:translate-x-1 hover:text-orange-600 dark:hover:text-orange-400"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
           </motion.div>
 
           <motion.div
@@ -156,10 +135,10 @@ export const Footer = () => {
           transition={{ duration: 0.34, ease: "easeOut", delay: 0.1 }}
         >
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Sanfoura Kitchen. All rights reserved.
+            Â© {new Date().getFullYear()} Sanfoura Kitchen. All rights reserved.
           </p>
           <p className="text-sm text-muted-foreground">
-            Made with ❤️ for food lovers everywhere
+            Made with â¤ï¸ for food lovers everywhere
           </p>
         </motion.div>
       </motion.div>

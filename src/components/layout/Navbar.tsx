@@ -8,6 +8,7 @@ import {
   Search,
   Sparkles,
 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -31,7 +32,7 @@ import { SearchModal } from "./search-form";
 const navItems = [
   { name: "Home", href: "/" },
   { name: "Meals", href: "/meals" },
-  { name: "Restaurants", href: "/providers" },
+  { name: "Menu", href: "/menu" },
   { name: "About", href: "/about" },
   { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
@@ -94,9 +95,14 @@ export default function Navbar() {
         <div className="container mx-auto flex h-20 items-center justify-between px-4">
           {/* Left - Logo */}
           <Link href="/" className="text-xl font-bold flex items-center gap-2">
-            <div className="w-10 h-10 rounded-xl bg-red-600 flex items-center justify-center">
-              <span className="text-white font-bold text-xl">F</span>
-            </div>
+            <Image
+              src="/logo-sm.png"
+              alt="Sanfoura Kitchen logo"
+              width={48}
+              height={44}
+              className="h-11 w-auto"
+              priority
+            />
             <span className="text-xl font-bold text-foreground">Sanfoura Kitchen</span>
           </Link>
 
