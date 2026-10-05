@@ -11,7 +11,7 @@ export default function CommonLayout({
   return (
     <>
       <Navbar />
-      <main className="pt-16">{children}</main>
+      <main className="pt-16 sm:pt-24">{children}</main>
       <Footer />
       <WhatsAppFloat />
     </>

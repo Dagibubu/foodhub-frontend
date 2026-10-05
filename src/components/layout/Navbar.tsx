@@ -30,10 +30,26 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 border-b bg-background/90 backdrop-blur">
+    <header className="fixed left-0 right-0 top-0 z-50 bg-background/90 shadow-sm backdrop-blur">
+      <div className="hidden h-8 items-center bg-[#3d9fb0] text-xs text-white sm:flex">
+        <div className="container mx-auto flex items-center justify-between px-4">
+          <span>{siteConfig.hours}</span>
+          <span className="flex items-center gap-4">
+            <span>{siteConfig.location}</span>
+            <a
+              href={chatUrl()}
+              target="_blank"
+              rel="noreferrer"
+              className="font-semibold hover:underline"
+            >
+              {siteConfig.whatsappDisplay}
+            </a>
+          </span>
+        </div>
+      </div>
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2">
-          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-teal-700 text-white">
+          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#3d9fb0] text-white">
             <ChefHat className="h-5 w-5" />
           </span>
           <span className="leading-tight">
@@ -49,9 +65,9 @@ export default function Navbar() {
             <Link
               key={item.href}
               href={item.href}
-              className={`text-sm font-medium transition-colors hover:text-teal-700 ${
+              className={`text-sm font-medium transition-colors hover:text-[#f2402f] ${
                 pathname === item.href
-                  ? "text-teal-700"
+                  ? "text-[#f2402f]"
                   : "text-muted-foreground"
               }`}
             >
@@ -63,7 +79,7 @@ export default function Navbar() {
         <div className="flex items-center gap-2">
           <Button
             asChild
-            className="hidden bg-[#25D366] text-white hover:bg-[#1ebe5b] sm:inline-flex"
+            className="hidden rounded-full bg-[#f2402f] px-5 text-white hover:bg-[#d93424] sm:inline-flex"
           >
             <a href={chatUrl()} target="_blank" rel="noreferrer">
               <WhatsAppIcon className="mr-2 h-4 w-4" />

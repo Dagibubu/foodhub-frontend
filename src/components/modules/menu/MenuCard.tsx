@@ -24,15 +24,23 @@ export function MenuCard({ item }: { item: MenuItem }) {
   };
 
   return (
-    <article className="flex flex-col overflow-hidden rounded-2xl border bg-card shadow-sm">
+    <article className="group flex flex-col overflow-hidden rounded-3xl border bg-card shadow-sm transition duration-300 hover:-translate-y-1.5 hover:shadow-xl">
       <div className="relative aspect-4/3 overflow-hidden bg-muted">
         <Image
           src={item.image}
           alt={item.name}
           fill
           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-          className={`object-cover ${item.available ? "" : "grayscale"}`}
+          className={`object-cover transition duration-500 group-hover:scale-110 ${
+            item.available ? "" : "grayscale"
+          }`}
         />
+        <span className="absolute right-3 top-3 rounded-full bg-white/95 px-3 py-1 text-sm font-bold text-[#0f2a43] shadow">
+          {formatPrice(item.price)}
+        </span>
+        <span className="absolute bottom-3 left-3 rounded-full bg-[#3d9fb0]/90 px-3 py-1 text-xs font-medium text-white backdrop-blur">
+          {item.category}
+        </span>
         {!item.available && (
           <span className="absolute left-3 top-3 rounded-full bg-black/70 px-3 py-1 text-xs font-medium text-white">
             Sold out
@@ -41,12 +49,9 @@ export function MenuCard({ item }: { item: MenuItem }) {
       </div>
 
       <div className="flex flex-1 flex-col gap-2 p-4">
-        <div className="flex items-start justify-between gap-3">
-          <h3 className="font-semibold leading-snug">{item.name}</h3>
-          <span className="shrink-0 font-bold text-teal-700">
-            {formatPrice(item.price)}
-          </span>
-        </div>
+        <h3 className="text-lg font-bold text-[#0f2a43] leading-snug">
+          {item.name}
+        </h3>
         {item.nameAr && (
           <p dir="rtl" className="text-sm text-muted-foreground">
             {item.nameAr}
@@ -58,7 +63,7 @@ export function MenuCard({ item }: { item: MenuItem }) {
           <Button
             onClick={handleAdd}
             disabled={!item.available}
-            className="flex-1 bg-teal-700 hover:bg-teal-800"
+            className="flex-1 rounded-full bg-[#f2402f] hover:bg-[#d93424]"
           >
             <Plus className="mr-1 h-4 w-4" />
             Add to cart
@@ -67,7 +72,7 @@ export function MenuCard({ item }: { item: MenuItem }) {
             asChild
             variant="outline"
             size="icon"
-            className="border-[#25D366] text-[#25D366] hover:bg-[#25D366] hover:text-white"
+            className="rounded-full border-[#25D366] text-[#25D366] hover:bg-[#25D366] hover:text-white"
           >
             <a
               href={dishUrl(item.name)}
