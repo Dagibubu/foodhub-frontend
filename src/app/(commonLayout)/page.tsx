@@ -3,39 +3,24 @@ import { MenuShowcase } from "@/components/modules/home/MenuShowcase";
 import { MenuCard } from "@/components/modules/menu/MenuCard";
 import { menuItems } from "@/data/menu";
 import { chatUrl } from "@/lib/whatsapp";
-import { formatPrice } from "@/lib/format";
 import {
   ArrowRight,
-  Clock,
-  Flame,
-  HeartHandshake,
   Leaf,
-  MessageCircle,
   PackageCheck,
-  Star,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-
-const features = [
-  { icon: Flame, label: "Cooked fresh" },
-  { icon: Leaf, label: "Real ingredients" },
-  { icon: HeartHandshake, label: "Homemade with love" },
-  { icon: MessageCircle, label: "Order on WhatsApp" },
-  { icon: Clock, label: "Open daily" },
-];
 
 const RED = "bg-[#f2402f] hover:bg-[#d93424]";
 
 export default function Home() {
   const specials = menuItems.filter((item) => item.featured);
-  const [first, second] = specials;
 
   return (
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-[#d9f0f1]">
-        <div className="container mx-auto grid items-center gap-10 px-4 pb-44 pt-12 md:grid-cols-2 md:pb-52 md:pt-20">
+        <div className="container mx-auto grid items-center gap-10 px-4 pb-16 pt-12 md:grid-cols-2 md:pb-24 md:pt-20">
           <div className="animate-fade-up">
             <h1 className="text-4xl font-extrabold leading-[1.1] text-[#0f2a43] md:text-6xl">
               Homemade food
@@ -103,59 +88,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Overlapping cards + feature bar */}
-        <div className="absolute inset-x-0 bottom-0 translate-y-0">
-          <div className="container mx-auto px-4">
-            <div className="grid gap-4 md:grid-cols-2">
-              {[
-                { item: first, bg: "bg-[#a78a2b]" },
-                { item: second, bg: "bg-[#3d9fb0]" },
-              ].map(
-                ({ item, bg }) =>
-                  item && (
-                    <Link
-                      key={item.id}
-                      href="/menu"
-                      className={`flex items-center gap-4 rounded-t-3xl p-4 text-white shadow-xl transition hover:-translate-y-1 ${bg}`}
-                    >
-                      <Image
-                        src={item.image}
-                        alt={item.name}
-                        width={80}
-                        height={80}
-                        className="h-20 w-20 shrink-0 rounded-full border-4 border-white object-cover"
-                      />
-                      <div className="min-w-0 flex-1">
-                        <h3 className="truncate font-bold">{item.name}</h3>
-                        <div className="mt-1 flex gap-0.5">
-                          {[0, 1, 2, 3, 4].map((n) => (
-                            <Star
-                              key={n}
-                              className="h-3.5 w-3.5 fill-amber-300 text-amber-300"
-                            />
-                          ))}
-                        </div>
-                      </div>
-                      <span className="text-xl font-extrabold">
-                        {formatPrice(item.price)}
-                      </span>
-                    </Link>
-                  ),
-              )}
-            </div>
-            <div className="grid grid-cols-2 gap-4 rounded-b-3xl bg-[#3d9fb0] px-6 py-5 text-white shadow-xl sm:grid-cols-3 md:grid-cols-5">
-              {features.map(({ icon: Icon, label }) => (
-                <div
-                  key={label}
-                  className="flex items-center gap-2 text-sm font-medium"
-                >
-                  <Icon className="h-5 w-5 shrink-0" />
-                  {label}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* Menu showcase */}
